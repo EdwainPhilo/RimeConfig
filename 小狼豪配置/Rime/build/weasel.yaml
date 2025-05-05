@@ -1,0 +1,86 @@
+__build_info:
+  rime_version: 1.11.2
+  timestamps:
+    weasel: 1728048073
+    weasel.custom: 1746128263
+app_options:
+  cmd.exe:
+    ascii_mode: true
+  conhost.exe:
+    ascii_mode: true
+  firefox.exe:
+    inline_preedit: true
+config_version: 0.22
+global_ascii: false
+preset_color_schemes:
+  mac_dark:
+    back_color: 0x606162
+    border_color: 0x050505
+    candidate_text_color: 0xe9e9ea
+    comment_text_color: 0x999999
+    hilited_back_color: 0xD75A00
+    hilited_candidate_back_color: 0xD15801
+    hilited_candidate_text_color: 0xFFFFFF
+    hilited_comment_text_color: 0x999999
+    hilited_label_color: 0xFFFFFF
+    hilited_text_color: 0x999999
+    label_color: 0x989898
+    name: "Mac深色"
+    text_color: 0x424242
+  mac_light:
+    back_color: 0xF1F1F2
+    border_color: 0xFFFFFF
+    candidate_text_color: 0x3c3c3c
+    comment_text_color: 0x999999
+    hilited_back_color: 0xD75A00
+    hilited_candidate_back_color: 0xD15801
+    hilited_candidate_text_color: 0xFFFFFF
+    hilited_comment_text_color: 0x999999
+    hilited_label_color: 0xFFFFFF
+    hilited_text_color: 0x999999
+    label_color: 0x989898
+    name: "Mac浅色"
+    text_color: 0x424242
+  win11dark:
+    back_color: 0x2C2C2C
+    border_color: 0x002C2C2C
+    hilited_candidate_back_color: 0x383838
+    hilited_label_color: 0xf9f9f9
+    hilited_mark_color: 0xFFC24C
+    label_color: 0xf9f9f9
+    name: "Win11暗色 / Win11Dark"
+    shadow_color: 0x20000000
+    text_color: 0xf9f9f9
+  win11light:
+    back_color: 0xf9f9f9
+    border_color: 0x009e5a00
+    hilited_candidate_back_color: 0xf0f0f0
+    hilited_label_color: 0x191919
+    hilited_mark_color: 0xc06700
+    label_color: 0x191919
+    name: " Win11浅色 / Win11light"
+    shadow_color: 0x20000000
+    text_color: 0x191919
+show_notifications: true
+show_notifications_time: 1200
+style:
+  color_scheme: mac_light
+  color_scheme_dark: mac_dark
+  font_face: "PingFang SC"
+  font_point: 12
+  horizontal: true
+  inline_preedit: true
+  label_font_point: 7
+  label_format: "%s "
+  layout:
+    border_width: 0
+    candidate_spacing: 8
+    hilite_padding: 0
+    hilite_padding_x: 8
+    hilite_padding_y: 4
+    hilite_spacing: 0
+    margin_x: 8
+    margin_y: 0
+    min_height: 0
+    min_width: 44
+    round_corner: 7
