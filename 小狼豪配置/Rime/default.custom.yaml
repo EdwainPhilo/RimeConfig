@@ -2,23 +2,17 @@ customization:
   distribution_code_name: Weasel
   distribution_version: 0.16.3
   generator: "Rime::SwitcherSettings"
-  modified_time: "Thu May  1 23:18:07 2025"
+  modified_time: "Mon May  5 22:26:57 2025"
   rime_version: 1.11.2
 patch:
+  "ascii_composer/good_old_caps_lock": true
+  "ascii_composer/switch_key":
+    Caps_Lock: noop
+    Control_L: commit_code
+    Control_R: commit_code
+  "key_binder/bindings":
+    - {accept: bracketleft, send: Page_Up, when: paging}
+    - {accept: bracketright, send: Page_Down, when: has_menu}
   schema_list:
     - {schema: flypy}
-  ascii_composer/good_old_caps_lock: true
-  ascii_composer/switch_key:
-    Caps_Lock: noop
-    Shift_L: noop
-    Shift_R: noop
-    Control_L: commit_code
-    Control_R: noop
-
-  key_binder/bindings:
-    - when: paging
-      accept: bracketleft
-      send: Page_Up
-    - when: has_menu
-      accept: bracketright
-      send: Page_Down
+    - {schema: japanese}

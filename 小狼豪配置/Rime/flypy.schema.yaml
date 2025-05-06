@@ -64,9 +64,11 @@ speller:
   initials: ';abcdefghijklmnopqrstuvwxyz'
   finals: "'"
   #delimiter: " '"
-  max_code_length: 4
+  max_code_length: 5
   auto_select: true   #顶字上屏
-  auto_select_pattern: ^;.$|^\w{4}$
+  # Match: pure 4-char (CN), xx;x (JP-Kanji4), xx;xx (JP-Kanji5), x/xx/xxx; (Hiragana), x/xx/xxxP; (Katakana)
+  # WARNING: Kana auto-select increases risk of prefix conflict with potential future Kanji codes.
+  auto_select_pattern: ^[a-z]{4}$|^[a-z]{2};[a-z]$|^[a-z]{2};[a-z]{2}$|^[a-z]{1,3};$|^[a-z]{1,3}p;$
   auto_clear: max_length #manual|auto|max_length 空码按下一键确认清屏|空码自动清|达到最长码时后码顶上清屏
 
 translator:
@@ -136,11 +138,11 @@ key_binder:
     - {accept: bracketright, send: Page_Down, when: has_menu} # ]下翻页
     - {accept: comma, send: comma, when: paging} #注销逗号翻页
     - {accept: period, send: period, when: has_menu} #注销句号翻页
-    - {accept: semicolon, send: 2, when: has_menu} #分号次选
+    - {accept: Tab, send: 2, when: has_menu} #Tab次选
   #  - {accept: Release+semicolon, send: semicolon, when: has_menu} #如启用此行，则分号引导符号功能无效
     - {accept: Release+period, send: period, when: composing} #句号顶屏
     - {accept: Release+comma, send: comma, when: composing} #逗号顶屏
-    - {accept: "Tab", send: Escape, when: composing}
+  #  - {accept: "Tab", send: Escape, when: composing}
     - {accept: "Shift_R", send: Escape, when: composing}
     - {accept: "Shift+space", toggle: full_shape, when: always} #切换全半角
     - {accept: "Control+period", toggle: ascii_punct, when: always} #切换中英标点
